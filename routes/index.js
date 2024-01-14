@@ -19,10 +19,6 @@ router.get("/", function (req, res, next) {
 	res.render("index", { title: "Mini Messageboard", messages: messages });
 });
 
-router.get("/new", function (req, res, next) {
-	res.render("form");
-});
-
 router.post("/new", function (req, res, next) {
 	var { messageText, messageUser } = req.body;
 	messages.push({ text: messageText, user: messageUser, added: new Date() });
