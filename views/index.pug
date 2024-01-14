@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .board-container 
+    .board-header 
+      h1 Mini Message Board
+    .board-body 
+      .messages-container 
+        each message in messages 
+          div 
+            p
+              span.message-author #{message.user}
+              span.messsage-date #{message.added.toISOString().substring(0, 10)}
+            p.message-text #{message.text}     
+    .board-footer
+      
+    
