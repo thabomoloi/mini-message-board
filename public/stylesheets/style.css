@@ -81,3 +81,35 @@ body {
 .message-date {
 	font-style: italic;
 }
+
+input,
+textarea {
+	font: inherit;
+}
+
+.message-form {
+	display: flex;
+	padding: 1rem;
+	gap: 0.5rem;
+}
+
+.message-form .inputs {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	gap: 0.25rem;
+}
+
+.message-form input[type="submit"] {
+	font-weight: bold;
+	border: none;
+	background-color: #99f6e4;
+}
+input,
+textarea {
+	background-color: #ecfdf5;
+	border: none;
+}
+.board-footer {
+	background-color: #065f46;
+}

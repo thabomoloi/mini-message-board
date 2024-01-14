@@ -8,10 +8,13 @@ block content
       .messages-container 
         each message in messages 
           div 
-            p
+            p.message-header
               span.message-author #{message.user}
-              span.messsage-date #{message.added.toISOString().substring(0, 10)}
+              span.message-date #{message.added.toISOString().substring(0, 10)}
             p.message-text #{message.text}     
     .board-footer
-      
-    
+      form(action="/new", method="post").message-form
+        .inputs
+          input(type="text", name="messageUser", placeholder="Enter your name...", required)
+          textarea(name="messageText", cols="30", rows="3", placeholder="Enter a message...", required)
+        input(type="submit", value="Add")
